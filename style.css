@@ -1,0 +1,9 @@
+.match-container{
+	padding: 0;
+}
+.match-container .match {
+	height: 210px;
+	padding: 5px;
+	margin: 5px;
+	box-shadow: 0 0 2px #ddd;
+}

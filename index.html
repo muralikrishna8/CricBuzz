@@ -1,15 +1,30 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app="cricbuzz">
 	<head>
 		<title>Cricbuzz - app</title>
 		<link rel = "stylesheet" href = "bower_components/bootstrap/css/bootstrap.css">
+		<link rel = "stylesheet" href = "style.css">
 	</head>
 	<body>
-		<div class="container-fluid">
+		<div class="container-fluid" ng-controller = "currentMatchesController as currentMatches">
 			<h2 class="text-success">Cricbuzz - application</h2>
+			<div class = "row-fluid">
+				<div class = "match-container col-md-3 col-sm-4" ng-repeat = "match in currentMatches.matches">
+					<div class = "match">
+						<h5>{{match.team1.shortName}} vs {{match.team2.shortName}}</h5>
+						<p>{{match.battingTeamName}} - <b>{{match.currentBatTeamScore.runsAndWicket}}</b>, <b>{{match.currentBatTeamScore.overs}}</b> overs</p>
+						<p>{{match.status}}</p>
+						<hr>
+						<p>{{match.matchdesc}}</p>
+						<p>{{match.series}}</p>
+					</div>
+				</div>
+			</div>
 		</div>
 		<script type="text/javascript" src = "bower_components/jquery/jquery.min.js"></script>
 		<script type="text/javascript" src = "bower_components/bootstrap/js/bootstrap.min.js"></script>
-		<script type="text/javascript" src = "bower_components/angular/angular.js"></script>	
+		<script type="text/javascript" src = "bower_components/angular/angular.js"></script>
+		<script type="text/javascript" src = "app.js"></script>
+		<script type="text/javascript" src = "controllers/currentMatchesController.js"></script>
 	</body>
 </html>
