@@ -1,0 +1,14 @@
+{
+	"name" : "CricBuzz - Murali",
+	"version" : "1.0.0",
+	"description" : "Fetches the data from the CricBuzz",
+	"main" : "index.html",
+	"scripts" : {
+		"test" : "echo \"Error: no test specifies\" && exit 1"
+	},
+	"window" : {
+		"toolbar" : false,
+		"width" : 800,
+		"height" : 500
+	}
+}
